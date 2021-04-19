@@ -1,0 +1,161 @@
+/* common */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    color: white;
+}
+.opaque {
+    opacity: 0.5;
+}
+
+.text-uppercase {
+    text-transform: uppercase;
+}
+
+.flex-container {
+    display: flex;
+    width: 100%;
+    height: calc(100vh - 90px);
+}
+
+.flex-row {
+    display: flex;
+    align-items: center;
+}
+
+.xs-visible {
+    display: none;
+}
+
+/* left-menu */
+.left-menu {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 300px;
+    background-color: black;
+    font-size: 16px;
+}
+
+.logo {
+    line-height: 90px;
+    padding-left: 15px;
+}    
+.logo img {
+    height: 50px;
+    vertical-align: middle;
+}
+
+.list-nav {
+    list-style: none;
+}
+.list-nav-top li {
+    padding: 5px 0 5px 15px;
+    border-left: solid 2px transparent;
+}
+.list-nav img {
+    height: 30px;
+}
+.list-nav a {
+    text-decoration: none;
+    color: white;
+}
+.list-nav span {
+    padding-left: 10px;
+}
+
+.list-nav-top li:first-child {
+    border-left: solid 2px #a5f42d;
+}
+
+.list-playlist {
+    padding: 20px 0 0 15px;
+}
+
+.list-playlist > a {
+    margin: 15px 0;
+    text-decoration: none;
+    color: white;
+}
+
+.list-playlist > a span {
+    padding-left: 10px;
+    font-size: 18px;
+}
+
+.add-playlist {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 40px;
+    height: 40px;
+    background-color: white;
+    color: black;
+    font-size: 30px;
+    font-weight: bolder;
+}
+
+.list-playlist li {
+    padding: 5px 0;
+    line-height: 25px;
+}
+
+.list-playlist .list-nav {
+    overflow-y: auto;
+}
+
+.left-menu-bottom {
+    padding: 0 15px;
+}
+
+.download {
+    display: flex;
+    align-items: center;
+    padding: 50px 0 10px;
+    border-bottom: solid 1px white;
+}
+.download img {
+    height: 20px;
+}
+.download span {
+    padding-left: 10px;
+    font-size: 14px;
+}
+
+.profile {
+    display: flex;
+    align-items: center;
+    padding: 10px 0 5px;
+}
+.profile-image {
+    display: flex;
+    justify-content: center;
+    width: 30px;
+    height: 30px;
+    overflow: hidden;
+    background-color: #808080;
+    border-radius: 50%;
+}
+.profile img {
+    height: 100%;
+}
+.profile span {
+    padding-left: 10px;
+    font-size: 18px;
+    font-weight: bold;
+}
+/* app-view */
+.app-view {
+    width: calc(100% - 300px);
+    background-color: #141922;
+}
+
+/* playbar */
+.playbar {
+    height: 90px;
+    background-color: #282828;
+}
