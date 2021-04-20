@@ -16,6 +16,9 @@ body {
 .text-uppercase {
     text-transform: uppercase;
 }
+.text-center {
+    text-align: center;
+}
 
 .flex-container {
     display: flex;
@@ -37,9 +40,9 @@ body {
     display: flex;
     flex-direction: column;
     justify-content: space-between;
-    width: 240px;
+    width: 230px;
     background-color: black;
-    font-size: 14px;
+    font-size: 12px;
     overflow: hidden;
 }
 
@@ -101,7 +104,7 @@ body {
 
 .list-playlist > a span {
     padding-left: 10px;
-    font-size: 16px;
+    font-size: 14px;
 }
 
 .add-playlist {
@@ -171,8 +174,91 @@ body {
 }
 /* app-view */
 .app-view {
-    width: calc(100% - 240px);
+    width: calc(100% - 230px);
     background-color: #141922;
+    overflow-y: auto;
+}
+
+.upgrade-panel {
+    position: fixed;
+    top: 0;
+    width: calc(100% - 230px);
+    display: flex;
+    flex-direction: row-reverse;
+    align-items: center;
+    height: 90px;
+    background-color: rgba(14, 14, 14, 0.7);
+}
+
+.upgrade-button {
+    margin-right: 20px;
+    padding: 10px 40px;
+    border: solid 1px white;
+    border-radius: 20px;
+    font-size: 12px;
+}
+
+.nav-main {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    width: 100%;
+    padding-top: 110px;
+}
+.nav-main a {
+    margin: 0 20px 30px;
+    text-decoration: none;
+    color: white;
+    font-size: 12px;
+    opacity: 0.5;
+}
+.nav-main a:first-child::after{
+    content: "";
+    display: block;
+    margin: auto;
+    width: 40%;
+    border: solid 1px #a5f42d;
+}
+
+.app-section {
+    padding: 10px 10px 0px;
+}
+.app-section h2 {
+    font-size: 16px;
+}
+.playlists {
+    display: flex;
+    padding-bottom: 30px;
+}
+.recent .playlists {
+    justify-content: space-between;
+}
+
+.app-section > span {
+    font-size: 10px;
+}
+
+.playlist-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 15%;
+    padding-top: 20px;
+}
+.playlist-item img {
+    width: 90%;
+    padding-bottom: 10px;
+}
+.playlist-item h3 {
+    padding-bottom: 10px;
+    font-size: 12px;
+}
+.playlist-item span {
+    font-size: 10px;
+}
+
+.artists img {
+    border-radius: 50%;
 }
 
 /* playbar */
@@ -185,7 +271,7 @@ body {
 
 .playbar-left,
 .playbar-right {
-    width: 240px;
+    width: 230px;
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -213,10 +299,10 @@ body {
     padding-left: 10px;
 }
 .song-name h5 {
-    font-size: 13px;
+    font-size: 12px;
 }
 .song-name p {
-    font-size: 12px;
+    font-size: 10px;
 }
 
 .add-song i {
@@ -239,7 +325,7 @@ body {
 .song-time span {
     width: 15%;
     text-align: center;
-    font-size: 12px;
+    font-size: 10px;
 }
 .total-time {
     position: relative;
@@ -271,7 +357,22 @@ body {
     border-radius: 2px;
 }
 
+@media screen and (max-width: 1199px) {
+
+    .recent .playlists {
+        flex-wrap: wrap;
+        justify-content: start;
+    }
+    .playlist-item {
+        width: 25%;
+    }
+}
+
 @media screen and (max-width: 991px) {
+
+    .playlist-item {
+        width: 50%;
+    }
 
     .playbar-right,
     .playbar-left {
@@ -330,5 +431,9 @@ body {
     }
     #logo-xs {
         height: 30px;
+    }
+
+    .upgrade-panel {
+        width: calc(100% - 60px);
     }
 }
