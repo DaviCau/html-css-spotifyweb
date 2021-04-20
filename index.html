@@ -4,6 +4,8 @@
         <meta charset="UTF-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="preconnect" href="https://fonts.gstatic.com">
+        <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@700&display=swap" rel="stylesheet">
         <link rel="icon" href="img/favicon.ico">
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" integrity="sha512-iBBXm8fW90+nuLcSKlbmrPcLa0OT92xO1BIsZ+ywDWZCvqsWgccV3gFoRBv0z+8dLJgyAHIhR35VZc2oM/gI1w==" crossorigin="anonymous" />
         <link rel="stylesheet" href="css/style.css">
@@ -15,7 +17,7 @@
                 <div class="left-menu-top">
                     <div class="logo">
                         <img src="img/logo.svg" alt="logo spotify" class="xs-hidden">
-                        <img src="img/logo-small.svg" alt="logo spotyfy" class="xs-visible">
+                        <img src="img/logo-small.svg" alt="logo spotyfy" class="xs-only" id="logo-xs">
                     </div>
 
                     <div class="left-nav">
@@ -39,12 +41,13 @@
                                 </a>
                             </li>
                         </ul>
+
                         <div class="list-playlist xs-hidden">
                             <h4 class="text-uppercase">
                                 playlist
                             </h4>
                             <a href="#" class="flex-row opaque">
-                                <div class="add-playlist">&plus;</div>
+                                <div class="add-playlist"><i class="fas fa-plus"></i></div>
                                 <span>Crea playlist</span>
                             </a>
                             <ul class="list-nav opaque">
@@ -73,16 +76,17 @@
                         </div>
                     </div>
                 </div>
+                
                 <div class="left-menu-bottom">
                     <div class="download opaque">
                         <img src="img/download.svg" alt="download">
-                        <span>Installa app</span>
+                        <span class="xs-hidden">Installa app</span>
                     </div>
                     <div class="profile">
                         <div class="profile-image">
                             <img src="img/profile.svg" alt="profile">
                         </div>
-                        <span class="profile-name">John Doe</span>
+                        <span class="profile-name xs-hidden">John Doe</span>
                     </div>
                 </div>
             </div>

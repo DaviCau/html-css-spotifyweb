@@ -7,6 +7,7 @@
 
 body {
     color: white;
+    font-family: 'Montserrat', sans-serif;
 }
 .opaque {
     opacity: 0.5;
@@ -27,7 +28,7 @@ body {
     align-items: center;
 }
 
-.xs-visible {
+.xs-only {
     display: none;
 }
 
@@ -36,9 +37,10 @@ body {
     display: flex;
     flex-direction: column;
     justify-content: space-between;
-    width: 300px;
+    width: 240px;
     background-color: black;
-    font-size: 16px;
+    font-size: 14px;
+    /* overflow: hidden; */
 }
 
 .logo {
@@ -84,7 +86,7 @@ body {
 
 .list-playlist > a span {
     padding-left: 10px;
-    font-size: 18px;
+    font-size: 16px;
 }
 
 .add-playlist {
@@ -95,7 +97,7 @@ body {
     height: 40px;
     background-color: white;
     color: black;
-    font-size: 30px;
+    font-size: 20px;
     font-weight: bolder;
 }
 
@@ -123,7 +125,7 @@ body {
 }
 .download span {
     padding-left: 10px;
-    font-size: 14px;
+    font-size: 12px;
 }
 
 .profile {
@@ -145,12 +147,12 @@ body {
 }
 .profile span {
     padding-left: 10px;
-    font-size: 18px;
+    font-size: 16px;
     font-weight: bold;
 }
 /* app-view */
 .app-view {
-    width: calc(100% - 300px);
+    width: calc(100% - 240px);
     background-color: #141922;
 }
 
@@ -158,4 +160,56 @@ body {
 .playbar {
     height: 90px;
     background-color: #282828;
+}
+
+
+@media screen and (max-width: 767px) {
+
+    .xs-only {
+        display: inline-block;
+    }
+
+    .xs-hidden {
+        display: none;
+    }
+
+    .app-view {
+        width: calc(100% - 60px);
+    }
+
+    .left-menu {
+        width: 60px;
+        align-items: center;
+    }
+
+    .left-menu-top {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+    .list-nav-top li {
+        padding-left: 0;
+        border-left: 0;
+    }
+    .list-nav-top li:first-child {
+        border-left: 0;
+    }
+
+    .left-menu-bottom {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        padding: 0;
+    }
+    .download {
+        border-color: transparent;
+    }
+
+    .logo {
+        line-height: 50px;
+        padding-left: 0;
+    }
+    #logo-xs {
+        height: 30px;
+    }
 }
